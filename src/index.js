@@ -11,14 +11,20 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import ReactDOMClient from "react-dom/client";
 import { MantineProvider } from "@mantine/core";
 import App from "./App";
 
-ReactDOM.render(
-  <>
-    {/* <MantineProvider> */}
-    <App />
-    {/* </MantineProvider>, */}
-    document.getElementById("root")
-  </>
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     {/* <MantineProvider> */}
+//     <App />
+//     {/* </MantineProvider> */}
+//     {/* , document.getElementById("root") */}
+//   </React.StrictMode>
+// );
+
+const container = document.getElementById("root");
+const root = ReactDOMClient.createRoot(container);
+
+root.render(<App />);
