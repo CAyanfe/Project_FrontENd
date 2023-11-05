@@ -12,7 +12,7 @@ function App() {
       {/* <Home /> */}
 
       <Profile />
-      <div>`${API_URL}/register`</div>
+      <div>`${process.env.API_URL}/register`</div>
       {/* <Auth /> */}
     </div>
   );
